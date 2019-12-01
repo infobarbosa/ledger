@@ -1,0 +1,12 @@
+version: '3'
+services:
+  ledger:
+    build: .
+    ports:
+    - "8080:8080"
+    links:
+    - cassandra
+  cassandra:
+    image: cassandra:3.11
+volumes:
+  logvolume01: {}
