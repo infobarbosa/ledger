@@ -5,6 +5,10 @@ import java.sql.Timestamp;
 import java.util.Objects;
 import java.util.UUID;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Transaction implements Serializable{
     private static final long serialVersionUID = 1L;
     
@@ -13,9 +17,10 @@ public class Transaction implements Serializable{
 		DEBIT,
 	}
 
+    @Id
+    private UUID id;
     private UUID accountId;
     private Timestamp timestamp;
-    private UUID id;
     private Double amount;
     private String description;
     private Type type;
