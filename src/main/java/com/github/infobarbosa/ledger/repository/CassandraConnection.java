@@ -14,7 +14,7 @@ public class CassandraConnection {
     private static void init(){
         LOGGER.debug("inicializando conexao com cassandra");
         cluster = Cluster.builder()
-                    .addContactPoint("127.0.0.1")
+                    .addContactPoint("cassandra")
                     .build();
 
         LOGGER.info("inicializando conexao com cassandra");
