@@ -12,6 +12,8 @@ import javax.persistence.Id;
 public class Transaction implements Serializable{
     private static final long serialVersionUID = 1L;
     
+    public Transaction(){}
+    
     public enum Type {
 		CREDIT,
 		DEBIT,
